@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BarCode scan</title>
+  <title>定位</title>
 </head>
 
 <body>
   <video id="webcam-preview"></video>
   <p id="result"></p>
-  <p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
-  <button onclick="getLocation()">点我</button>
+  <p id="demo">點擊按鈕獲取位置</p>
+  <button onclick="getLocation()">點我</button>
   <script>
    var x=document.getElementById("demo");
 function getLocation()
@@ -23,14 +23,14 @@ function getLocation()
 	}
 	else
 	{
-		x.innerHTML="该浏览器不支持获取地理位置。";
+		x.innerHTML="不支援地理位置";
 	}
 }
 
 function showPosition(position)
 {
-	x.innerHTML="纬度: " + position.coords.latitude + 
-	"<br>经度: " + position.coords.longitude;	
+	x.innerHTML="緯度: " + position.coords.latitude + 
+	"<br>精度: " + position.coords.longitude;	
 }
     
   </script>
